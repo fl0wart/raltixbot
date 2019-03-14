@@ -37,17 +37,19 @@ bot.say('Cooldown is 24 hours!')
 @bot.event	                                                
 async def status_task():
     while True:
-        await bot.change_presence(game=discord.Game(name='made by fl0w.', type=2))
+        await bot.change_presence(game=discord.Game(name=':help', type=1))
         await asyncio.sleep(5)
         await bot.change_presence(game=discord.Game(name=str(len(set(bot.get_all_members())))+' users', type=3))
         await asyncio.sleep(5)
         await bot.change_presence(game=discord.Game(name=str(len(bot.servers))+' servers', type=3))
         await asyncio.sleep(5)
-        await bot.change_presence(game=discord.Game(name='made by fl0w.'))
+        await bot.change_presence(game=discord.Game(name='the piano'))
         await asyncio.sleep(5)
         await bot.change_presence(game=discord.Game(name='the server', type=3))
         await asyncio.sleep(5)
-        await bot.change_presence(game=discord.Game(name='made by fl0w.', type=2))
+        await bot.change_presence(game=discord.Game(name='heroku hosting me', type=3))
+        await asyncio.sleep(5)	
+        await bot.change_presence(game=discord.Game(name='github repository', type=3))
         await asyncio.sleep(5)	
         
 bot.run('NTU0NzI1MTM5ODA0MDYxNzA2.D2gzpg.P1VmXJSUzozuDyke-y9V50ASK2g')
