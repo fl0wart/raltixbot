@@ -16,18 +16,7 @@ async def on_ready():
     print('Created by fl0w.')
     bot.loop.create_task(status_task())    	 	 
  
-bot.remove_command('help')
 
-@bot.command(pass_context =True)
-async def help:
-    author = ctx.message.author
-    embed = discord.Embed(Colour = discord.Colour.orange())
-    embed.set_author(name = 'Help Commands')
-    embed.add_field(name =':ping', value ='Get the ping of the bot', inline=False)
-    embed.add_field(name =';purge', value ='Deletes certain amount of messages', inline=False)
-    embed.add_field(name =':serverinfo', value ='Gets the serverinfo of an mentioned user!', inline=False)
-    
-    await client.send_message(author, embed=embed)
     
 @bot.command(pass_context=True)
 async def ping(ctx):
@@ -49,16 +38,6 @@ async def daily(ctx):
     await bot.edit_message(t, new_content=':white_check_mark: You  received:  {}daily coins'.format(int(ms)))
 bot.say('Cooldown is 24 hours!')               
 
-@bot.command(pass_context=True)
-async def serverinfo(ctx, user: discord.Member):
-    embed = discord.Embed(title="{}'s info".format(user.name), description="Here's what I could find.", color=0x00ff00)
-    embed.add_field(name="Name", value=user.name, inline=True)
-    embed.add_field(name="ID", value=user.id, inline=True)
-    embed.add_field(name="Status", value=user.status, inline=True)
-    embed.add_field(name="Highest role", value=user.top_role)
-    embed.add_field(name="Joined", value=user.joined_at)
-    embed.set_thumbnail(url=user.avatar_url)
-    await client.say(embed=embed)
     
 @bot.event	                                                
 async def status_task():
