@@ -14,25 +14,6 @@ async def on_ready():
     print(bot.user.id)
     print('--------------------')
     await bot.change_presence(game=discord.Game(name='r!help ;)',type=1))
-  
-bot.remove_command('help')
-@bot.command(pass_context =True)
-async def help(ctx):
-    author = ctx.message.author
-    embed = discord.Embed(Colour = discord.Colour.orange())
-    embed.set_author(name = 'Help Commands')
-    embed.add_field(name ='r!ping', value ='Ping the bot!', inline=False)
-    embed.add_field(name ='r!purge', value ='Deletes certain amount of messages, default amount is 10 (INACTIVE COMMAND / OFFLINE COMMAND)', inline=False)
-    embed.add_field(name ='r!mute', value ='Mute an specified user', inline=False)
-    embed.add_field(name ='r!unmute', value ='Unmute an specified user', inline=False)
-    embed.add_field(name ='r!warn', value ='Warn an specified user', inline=False)
-    embed.add_field(name ='r!serverinfo', value ='Gives the server information on the selected user,so you must do ;serverinfo and mention the user!', inline=False)
-    embed.add_field(name ='r!kick', value ='Kicks an specified user', inline=False)
-    embed.add_field(name ='r!ban', value ='Bans an specified user', inline=False)
-    embed.add_field(name ='r!uptime', value ='Get the bot uptime', inline=False)
-    embed.add_field(name ='r!presence', value ='Change the bot presence', inline=False)
-    
-    await client.send_message(author, embed=embed)
     
 @bot.command(pass_context=True)
 async def ping():
