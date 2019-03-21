@@ -13,7 +13,7 @@ async def on_ready():
     print(bot.user.name)
     print(bot.user.id)
     print('--------------------')
-    await bot.change_presence(game=discord.Game(name='!help ;)',type=3, status=discord.Status("dnd"))
+    await bot.change_presence(game=discord.Game(name='!help ;)',type=3))
     
 @bot.command(pass_context=True)
 async def ping():
@@ -88,4 +88,4 @@ async def presence(ctx,text:str,type:int):
     else:
           await bot.say('No permission!')
  
-bot.run('NTU4MjE4ODU1MDMwNDU2MzMw.D3Vh-QobGMzLZeOExicNs1kt7msyQXvBc')
+bot.run('NTU4MjE4ODU1MDMwNDU2MzMw.D3Vh-Q.obGMzLZeOExicNs1kt7msyQXvBc')
