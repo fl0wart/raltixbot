@@ -16,11 +16,6 @@ async def on_ready():
     await bot.change_presence(game=discord.Game(name='!help ;)',type=3))
     
 @bot.command(pass_context=True)
-async def ping():
-    await bot.say('ping_pong')
-    await bot.say('You pinged me haha')
-   
-@bot.command(pass_context=True)
 async def mute(ctx,target:discord.Member):
     if ctx.message.author.id==(daniel):
       role=discord.utils.get(ctx.message.server.roles,name='Muted')
