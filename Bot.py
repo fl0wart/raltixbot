@@ -9,7 +9,7 @@ Mike = Bot('hs!')
 async def on_ready():
     print ("Starting up")
     print ("My username is " + Mike.user.name + " and i am running with the ID: " + Mike.user.id)
-    await Mike.change_presence(game=discord.Game(name="the server!", type=3))
+    await Mike.change_presence(game=discord.Game(name="the community!", type=3))
     print ("Started")
     
 Mike.remove_command('help')
