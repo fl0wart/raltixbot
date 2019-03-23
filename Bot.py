@@ -19,5 +19,5 @@ async def say(ctx, *args):
     mesg = ' '.join(args)
     await Mike.delete_message(ctx.message)
     return await Mike.say(mesg)
-    
-Mike.run('NTU2Mzc1NDg1NjM5MTYzOTI1.D241eA.mX9gcWly0SQn9yLIEzSCtwwmdRQ')
+   
+Mike.run('NTU5MDk4Mjk0ODA3MTY2OTg4.D3gccQ.mgq1wIkY2_xhdgaXJnq3sRHdwsc')
