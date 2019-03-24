@@ -18,4 +18,11 @@ async def say(ctx, *args):
     await bot.delete_message(ctx.message)
     return await bot.say(mesg)
    
+@bot.command(pass_context = True)
+@commands.has_permissions(administrator=True) 
+async def announce(ctx, channel: discord.Channel=None, *, msg: str):
+    embed=discord.Embed(title="HIGHSCAPE - Announcement", description="{}".format(msg),color=0x00ffff)
+    await bot.send_message(channel, embed=embed)
+    await bot.delete_message(ctx.message)
+    
 bot.run('NTU5MDk4Mjk0ODA3MTY2OTg4.D3gccQ.mgq1wIkY2_xhdgaXJnq3sRHdwsc')
