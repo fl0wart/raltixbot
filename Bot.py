@@ -32,4 +32,18 @@ async def announce2(ctx, channel: discord.Channel=None, *, msg: str):
     await bot.send_message(channel, embed=embed)
     await bot.delete_message(ctx.message)
     
+@bot.command(pass_context = True)
+@commands.has_permissions(administrator=True) 
+async def respins(ctx, channel: discord.Channel=None, *, msg: str):
+    embed=discord.Embed(description="{}".format(msg),color=ff0202)
+    await bot.send_message(channel, embed=embed)
+    await bot.delete_message(ctx.message)
+    
+@bot.command(pass_context = True)
+@commands.has_permissions(administrator=True) 
+async def accept(ctx, channel: discord.Channel=None, *, msg: str):
+    embed=discord.Embed(description="{}".format(msg),color=02ff45)
+    await bot.send_message(channel, embed=embed)
+    await bot.delete_message(ctx.message)
+    
 bot.run('NTU5MDk4Mjk0ODA3MTY2OTg4.D3gccQ.mgq1wIkY2_xhdgaXJnq3sRHdwsc')
