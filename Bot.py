@@ -7,7 +7,7 @@ bot=commands.Bot(command_prefix='ir!')
 async def on_ready():
     print('Logged in as '+bot.user.name+' (ID:'+bot.user.id+') | Connected to '+str(len(bot.servers))+' servers | Connected to '+str(len(set(bot.get_all_members())))+' users')
     print('--------')
-    await bot.change_presence(game=discord.Game(name="you getting rewarded! 👀 ", type=3))
+    await bot.change_presence(game=discord.Game(name="you getting rewarded! 👀", type=3))
 
 bot.remove_command('help')
 
