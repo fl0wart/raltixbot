@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 import asyncio
 
-bot=commands.Bot(command_prefix='hs!')
+bot=commands.Bot(command_prefix='ir!')
 @bot.event
 async def on_ready():
     print('Logged in as '+bot.user.name+' (ID:'+bot.user.id+') | Connected to '+str(len(bot.servers))+' servers | Connected to '+str(len(set(bot.get_all_members())))+' users')
